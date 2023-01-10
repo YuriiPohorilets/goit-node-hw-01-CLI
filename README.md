@@ -6,8 +6,8 @@
 - В корені проекту створи файл `index.js`
 - Постав пакет [nodemon](https://www.npmjs.com/package/nodemon) як залежність розробки (devDependencies)
 - В файлі `package.json` додай "скрипти" для запуску `index.js`
-- Скрипт `start` який запускає `index.js` за допомогою `node`
-- Скрипт `dev` який запускає `index.js` за допомогою `nodemon`
+  - Скрипт `start` який запускає `index.js` за допомогою `node`
+  - Скрипт `dev` який запускає `index.js` за допомогою `nodemon`
 
 ## Крок 2
 
