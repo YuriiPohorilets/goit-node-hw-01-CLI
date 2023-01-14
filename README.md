@@ -6,8 +6,8 @@
 - В корені проекту створи файл `index.js`
 - Постав пакет [nodemon](https://www.npmjs.com/package/nodemon) як залежність розробки (devDependencies)
 - В файлі `package.json` додай "скрипти" для запуску `index.js`
-- Скрипт `start` який запускає `index.js` за допомогою `node`
-- Скрипт `dev` який запускає `index.js` за допомогою `nodemon`
+  - Скрипт `start` який запускає `index.js` за допомогою `node`
+  - Скрипт `dev` який запускає `index.js` за допомогою `nodemon`
 
 ## Крок 2
 
@@ -20,7 +20,7 @@
 - Додай функції для роботи з колекцією контактів. У функціях використовуй модуль `fs` та його методи `readFile()` і `writeFile()`
 - Зроби експорт створених функцій через `module.exports`
 
-```contacts.js
+```javascript
 /*
  * Розкоментуйте і запиши значення
  * const contactsPath = ;
@@ -52,7 +52,7 @@ function addContact(name, email, phone) {
 
 В файлі `index.js` імпортується пакет yargs для зручного парса аргументів командного рядка. Використовуй готову функцію `invokeAction()` яка отримує тип виконуваної дії і необхідні аргументи. Функція викликає відповідний метод з файлу `contacts.js` передаючи йому необхідні аргументи.
 
-```
+```javascript
 // index.js
 const argv = require("yargs").argv;
 
@@ -85,7 +85,7 @@ invokeAction(argv);
 
 Так само, ви можете використовувати модуль [commander](https://www.npmjs.com/package/commander) для парсинга аргументів командного рядка. Це більш популярна альтернатива модуля `yargs`
 
-```
+```javascript
 const { Command } = require("commander");
 const program = new Command();
 program
@@ -130,7 +130,7 @@ invokeAction(argv);
 
 Запусти команди в терміналі і зроби окремий скріншот результату виконання кожної команди.
 
-```
+```console
 # Отримуємо і виводимо весь список контактів у вигляді таблиці (console.table)
 node index.js --action="list"
 
